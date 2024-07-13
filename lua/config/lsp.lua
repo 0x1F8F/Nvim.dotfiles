@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require 'lspconfig'
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   --  settings = {
@@ -6,8 +6,6 @@ lspconfig.rust_analyzer.setup {
   --  },
 }
 
-lspconfig.pyright.setup{
-}
+lspconfig.pyright.setup {}
 
-lspconfig["lua_ls"].setup {
-}
+lspconfig['lua_ls'].setup {}
