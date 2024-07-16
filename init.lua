@@ -67,7 +67,7 @@ local TelescopePrompt = {
   TelescopeNormal = { bg = colors.crust },
 
   TelescopePromptBorder = { fg = colors.mantle, bg = colors.mantle },
-  TelescopePromptNormal = { fg = colors.mantle, bg = colors.mantle },
+  TelescopePromptNormal = { fg = colors.text, bg = colors.mantle },
   TelescopePromptPrefix = { fg = colors.red, bg = colors.mantle },
 }
 for hl, col in pairs(TelescopePrompt) do
