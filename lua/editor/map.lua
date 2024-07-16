@@ -36,12 +36,14 @@ vim.keymap.set('i', '<C-f>', '<Cmd>Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>gf', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>')
 vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>')
-
 vim.keymap.set('n', '<leader>cf', '<Cmd>lua vim.lsp.buf.format()<CR>')
 vim.keymap.set('n', '<leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
 vim.keymap.set('n', '<leader>k', ':bnext<CR>')
 vim.keymap.set('n', '<leader>j', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>d', ':bdelete<CR>')
+
 -- alias
+vim.keymap.set('n', '<leader>n', ':bnext<CR>')
+vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>')
