@@ -13,6 +13,7 @@ vim.opt.ic = false
 vim.opt.showbreak = '> '
 vim.opt.smartcase = true
 vim.opt.smartindent = true
+vim.opt.scrolloff = 8
 vim.opt.undofile = true
 vim.opt.undolevels = 500
 vim.opt.undodir = home .. '/.cache/nvim/undo/'
