@@ -141,7 +141,7 @@ ins_left {
 		return ''
 	end,
 	color = { fg = colors.crust, bg = colors.base }, -- Sets highlighting of componen t
-	padding = { left = 1, right = 0 },              -- We don't need space before this
+	padding = { left = 1, right = 0 },
 }
 
 ins_left {
@@ -222,6 +222,7 @@ ins_right {
 	icon = '',
 	color = { fg = colors.violet, gui = 'bold' },
 }
+
 
 ins_right {
 	'diff',
