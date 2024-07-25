@@ -11,8 +11,6 @@ local lspconfig = require 'lspconfig'
 -- }
 -- empty line
 
-
-
 -- lspconfig.ast_grep.setup {
 -- 	filetypes = { "c", "cpp", "html", "bash", "java", "ruby", "css" }
 -- }
@@ -26,7 +24,7 @@ lspconfig.tsserver.setup {}
 lspconfig.tailwindcss.setup {}
 
 lspconfig.astro.setup {
-	filetypes = { "astro" }
+  filetypes = { 'astro' },
 }
 
 lspconfig.pyright.setup {}
@@ -34,7 +32,6 @@ lspconfig.pyright.setup {}
 lspconfig['lua_ls'].setup {}
 
 lspconfig.rust_analyzer.setup {}
-
 
 -- require("conform").setup({
 -- 	formatters_by_ft = {

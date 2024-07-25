@@ -21,12 +21,10 @@ vim.opt.backup = true
 vim.opt.backupdir = home .. '/.cache/nvim/backups/'
 vim.opt.wrap = false
 
-
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 -- vim.opt.expandtab = true
-
 
 vim.cmd.colorscheme 'catppuccin-macchiato'
 
@@ -57,14 +55,13 @@ vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>')
 
-
 -- perserve cursor position
-vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = "*",
-	callback = function()
-		local row, col = unpack(vim.api.nvim_buf_get_mark(0, '"'))
-		if row > 0 and row <= vim.api.nvim_buf_line_count(0) then
-			vim.api.nvim_win_set_cursor(0, { row, col })
-		end
-	end
+vim.api.nvim_create_autocmd('BufReadPost', {
+  pattern = '*',
+  callback = function()
+    local row, col = unpack(vim.api.nvim_buf_get_mark(0, '"'))
+    if row > 0 and row <= vim.api.nvim_buf_line_count(0) then
+      vim.api.nvim_win_set_cursor(0, { row, col })
+    end
+  end,
 })
