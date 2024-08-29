@@ -41,7 +41,7 @@ require('lazy').setup {
     { import = 'ext' },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { 'macchiato' } },
+    install = { colorscheme = { 'mocha' } },
     -- automatically check for plugin updates
     checker = { enabled = false },
   },
@@ -58,7 +58,7 @@ require 'config.dressing'
 require 'config.gitsigns'
 require 'config.lualine'
 
-local colors = require 'catppuccin.palettes.macchiato'
+local colors = require 'catppuccin.palettes.mocha'
 local TelescopePrompt = {
   TelescopePreviewTitle = { fg = colors.crust, bg = colors.red },
   TelescopePromptTitle = { fg = colors.crust, bg = colors.red },

@@ -27,7 +27,7 @@ lspconfig.astro.setup {
   filetypes = { 'astro' },
 }
 
-lspconfig.pyright.setup {}
+lspconfig.ruff.setup {}
 
 lspconfig['lua_ls'].setup {}
 

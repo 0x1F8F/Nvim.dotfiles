@@ -102,3 +102,19 @@ require('telescope').setup {
 
 require('telescope').load_extension 'file_browser'
 require('telescope').load_extension 'fzf'
+
+require('nvim-tree').setup {
+  sort = {
+    sorter = 'case_sensitive',
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+}
+require('aerial').setup {}

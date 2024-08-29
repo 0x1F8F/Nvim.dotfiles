@@ -13,14 +13,14 @@ local lualine = require 'lualine'
 --   darkblue = '#081633',
 --   green    = '#98be65',
 --   orange   = '#FF8800',
---   violet   = '#a9a1e1',
+--   violet   = '#af81ff',
 --   magenta  = '#c678dd',
 --   blue     = '#51afef',
 --   red      = '#ec5f67',
 -- }
 --
 local colors_latte = require 'catppuccin.palettes.latte'
-local colors_macchiato = require 'catppuccin.palettes.macchiato'
+local colors_macchiato = require 'catppuccin.palettes.mocha'
 
 local colors = colors_macchiato
 
@@ -101,7 +101,7 @@ ins_left {
     -- auto change color according to neovims mode
     local mode_color = {
       n = colors.red,
-      i = colors.green,
+      i = colors_latte.teal,
       v = colors.blue,
       [''] = colors.blue,
       V = colors.blue,
@@ -164,11 +164,17 @@ ins_left { 'progress', color = { fg = colors.text, gui = 'bold' } }
 ins_left {
   'diagnostics',
   sources = { 'nvim_diagnostic' },
-  symbols = { error = ' ', warn = ' ', info = '', hint = ' ' },
+  symbols = {
+    error = ' ',
+    warn = ' ',
+    info = '',
+    hint = ' ',
+  },
   diagnostics_color = {
     error = { fg = colors.red },
     warn = { fg = colors.yellow },
     info = { fg = colors.cyan },
+    hint = { fg = colors.teal },
   },
 }
 
@@ -183,7 +189,7 @@ ins_left {
 ins_right {
   -- Lsp server name .
   function()
-    local msg = 'No_Lsp'
+    local msg = ' '
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
