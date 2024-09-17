@@ -88,7 +88,7 @@ ins_left {
   function()
     return ''
   end,
-  color = { fg = colors.mantle, bg = colors_macchiato.base }, -- Sets highlighting of component"#494d64","#24273a",
+  color = { fg = colors.mantle, bg = colors_macchiato.base }, -- Sets highlighting of component"#494d64","#24273a",https://gemini.google.co #313244 #45475a #1e1e2e
   padding = { left = 1, right = 0 }, -- We don't need space before this #colors.mantle
 }
 
@@ -167,8 +167,8 @@ ins_left {
   symbols = {
     error = ' ',
     warn = ' ',
-    info = '',
-    hint = ' ',
+    info = ' ',
+    hint = '',
   },
   diagnostics_color = {
     error = { fg = colors.red },
