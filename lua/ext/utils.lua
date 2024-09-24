@@ -5,7 +5,9 @@ return {
   { 'hrsh7th/cmp-path' },
   { 'hrsh7th/cmp-cmdline' },
   { 'hrsh7th/nvim-cmp' },
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {
+		indent = { highlight = { 'Whitespace' } }
+	} },
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',

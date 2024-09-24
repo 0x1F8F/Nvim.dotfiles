@@ -19,7 +19,10 @@ local lspconfig = require 'lspconfig'
 -- 	filetypes = { "javascript", "typescript", "jsx", "tsx" , "json" }
 -- }
 --
+lspconfig.typos_lsp.setup { cmd = { "typos" } }
 lspconfig.tsserver.setup {}
+
+lspconfig.svelte.setup {}
 
 lspconfig.tailwindcss.setup {}
 
