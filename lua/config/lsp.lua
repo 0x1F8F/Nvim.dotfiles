@@ -19,8 +19,19 @@ local lspconfig = require 'lspconfig'
 -- 	filetypes = { "javascript", "typescript", "jsx", "tsx" , "json" }
 -- }
 --
-lspconfig.typos_lsp.setup { cmd = { "typos" } }
-lspconfig.tsserver.setup {}
+
+-- local lspconfig = require('lspconfig')
+lspconfig.denols.setup {
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+}
+
+lspconfig.tsserver.setup {
+  root_dir = lspconfig.util.root_pattern("package.json"),
+  single_file_support = false
+}
+
+
+lspconfig.typos_lsp.setup { cmd = { "/bin/typos" } }
 
 lspconfig.svelte.setup {}
 

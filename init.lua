@@ -57,6 +57,7 @@ require 'config.treesitter'
 require 'config.dressing'
 require 'config.gitsigns'
 require 'config.lualine'
+require 'config.utils'
 
 local colors = require 'catppuccin.palettes.mocha'
 local TelescopePrompt = {

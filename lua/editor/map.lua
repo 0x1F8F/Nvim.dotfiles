@@ -32,7 +32,6 @@ vim.cmd.colorscheme 'catppuccin-macchiato'
 -- toggle comment "<leader>gc<leader>" works in normal as well as visual
 --
 -- norm
-vim.keymap.set('n', '<leader>ts', ':Telescope<CR>')
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>gf', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>')
@@ -44,6 +43,7 @@ vim.keymap.set('n', '<leader>j', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>d', ':bdelete<CR>')
 vim.keymap.set('n', '<leader>e', ':Telescope file_browser<CR>')
 vim.keymap.set('n', '<leader>fm', ':Ex<CR>')
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
 
 -- ins
 vim.keymap.set('i', '<C-f>', '<Cmd>Telescope find_files<CR>')
