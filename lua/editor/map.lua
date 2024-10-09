@@ -41,15 +41,18 @@ vim.keymap.set('n', '<leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
 vim.keymap.set('n', '<leader>k', ':bnext<CR>')
 vim.keymap.set('n', '<leader>j', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>d', ':bdelete<CR>')
-vim.keymap.set('n', '<leader>e', ':Telescope file_browser<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<leader>fm', ':Ex<CR>')
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>h', ':wincmd h<CR>') -- nav
+vim.keymap.set('n', '<leader>j', ':wincmd j<CR>') -- nav
+vim.keymap.set('n', '<leader>k', ':wincmd k<CR>') -- nav
+vim.keymap.set('n', '<leader>l', ':wincmd l<CR>') -- nav
 
 -- ins
 vim.keymap.set('i', '<C-f>', '<Cmd>Telescope find_files<CR>')
 
 -- alias
-vim.keymap.set('n', '<leader>e', ':Telescope file_browser<CR>')
 vim.keymap.set('n', '<leader>n', ':bnext<CR>')
 vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope git_files<CR>')

@@ -1,4 +1,7 @@
 return {
+	{
+		'vxpm/ferris.nvim'
+	},
   'neovim/nvim-lspconfig',
   'stevearc/conform.nvim',
   {

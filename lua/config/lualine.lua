@@ -71,9 +71,10 @@ local config = {
     -- error = { fg = colors.red },
     -- warn = { fg = colors.yellow },
     -- info = { fg = colors.cyan },
+		  { 'filetype' , icon_only = true},
 		},
 
-		lualine_c = { { 'filename',icon='' } , { 'filesize' , icon = '󰖡' }},
+		lualine_c = { { 'filename' } , { 'filesize' , icon = '󰖡' }},
 		lualine_x = {
 			'encoding',
 			{
@@ -81,7 +82,6 @@ local config = {
 				fmt = string.lower,
 				icons_enabled = false,
 			},
-			'filetype',
 			{ get_active_lsp , icon = '󱁤'}
 		},
 
@@ -91,8 +91,8 @@ local config = {
 
 	inactive_sections = {
 		lualine_a = {},
-		lualine_b = {},
-		lualine_c = { 'filename','filesize' },
+		lualine_b = {'filetype'},
+		lualine_c = {'filename','filesize' },
 		lualine_x = { 'location' },
 		lualine_y = {},
 		lualine_z = {}
