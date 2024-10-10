@@ -22,16 +22,15 @@ local lspconfig = require 'lspconfig'
 
 -- local lspconfig = require('lspconfig')
 lspconfig.denols.setup {
-  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+  root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc'),
 }
 
 lspconfig['ts_ls'].setup {
-  root_dir = lspconfig.util.root_pattern("package.json"),
-  single_file_support = false
+  root_dir = lspconfig.util.root_pattern 'package.json',
+  single_file_support = false,
 }
 
-
-lspconfig.typos_lsp.setup { cmd = { "typos" } }
+lspconfig.typos_lsp.setup { cmd = { 'typos' } }
 
 lspconfig.svelte.setup {}
 
@@ -46,7 +45,7 @@ lspconfig.ruff.setup {}
 lspconfig['lua_ls'].setup {}
 
 lspconfig.rust_analyzer.setup {}
-require("ferris").setup()
+require('ferris').setup()
 -- require("ferris.methods.view_hir")
 -- require("conform").setup({
 -- 	formatters_by_ft = {
@@ -61,4 +60,3 @@ require("ferris").setup()
 -- 		lsp_format = "fallback",
 -- 	},
 -- })
-
