@@ -61,19 +61,14 @@ cmp.setup {
     -- documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert {
-    ['<Up>'] = cmp.mapping.confirm { select = false },
-    ['<Down>'] = cmp.mapping.confirm { select = false },
-    ['<Right>'] = cmp.mapping.confirm { select = false },
-    ['<Left>'] = cmp.mapping.confirm { select = false },
-    -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    -- default config for ref
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<Up>'] = cmp.mapping.abort(),
+    ['<Down>'] = cmp.mapping.abort(),
+    ['<Right>'] = cmp.mapping.abort(),
+    ['<Left>'] = cmp.mapping.abort(),
+    ['<C-j>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-k>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    -- ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    --
-    --  -- -- --
     ['<CR>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         if luasnip.expandable() then
@@ -86,23 +81,7 @@ cmp.setup {
       else
         fallback()
       end
-    end),
-    --
-    -- -- --- -- --------------------------------------------- -- -- --
-    -- ['<CR>'] = cmp.mapping {
-    --   i = function(fallback)
-    --     if cmp.visible() then
-    --     	cmp.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true }
-    --     else
-    --     	fallback()
-    --     end
-    --     -- cmp.conform { behavior = cmp.ConfirmBehavior.Replace, select = false }
-    --   end,
-    --
-    --   s = cmp.mapping.confirm { select = true },
-    --   c = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = false },
-    -- },
-    --
+    end,{ 'i' , 's'}),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()

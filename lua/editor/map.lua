@@ -48,6 +48,7 @@ vim.keymap.set('n', '<leader>h', ':wincmd h<CR>') -- nav
 vim.keymap.set('n', '<leader>j', ':wincmd j<CR>') -- nav
 vim.keymap.set('n', '<leader>k', ':wincmd k<CR>') -- nav
 vim.keymap.set('n', '<leader>l', ':wincmd l<CR>') -- nav
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 
 -- ins
 vim.keymap.set('i', '<C-f>', '<Cmd>Telescope find_files<CR>')
@@ -58,6 +59,7 @@ vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>')
 
+
 -- perserve cursor position
 vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = '*',
@@ -67,4 +69,21 @@ vim.api.nvim_create_autocmd('BufReadPost', {
       vim.api.nvim_win_set_cursor(0, { row, col })
     end
   end,
+})
+
+
+vim.diagnostic.config({
+    virtual_text = true,
+    float = {
+        focusable = false,
+        -- style = "minimal",
+        -- border = "none",
+        source = "always",
+        -- header = "[ Diagnostic ]",
+        -- prefix = "",
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = true,
+    severity_sort = false,
 })
