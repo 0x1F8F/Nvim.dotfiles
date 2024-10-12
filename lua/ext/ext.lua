@@ -1,4 +1,5 @@
 return {
+	'NvChad/nvim-colorizer.lua',
   'stevearc/dressing.nvim',
   'lewis6991/gitsigns.nvim',
   'vxpm/ferris.nvim',
@@ -41,13 +42,6 @@ return {
       }
     end,
   },
-  {
-    'stevearc/aerial.nvim',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
-    },
-  },
   { 'nvim-treesitter/nvim-treesitter' },
   { 'neovim/nvim-lspconfig' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -63,5 +57,12 @@ return {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
-  }
+  },
+  {
+    'stevearc/aerial.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+    },
+  },
 }

@@ -117,4 +117,3 @@ require('nvim-tree').setup {
     dotfiles = true,
   },
 }
-require('aerial').setup {}

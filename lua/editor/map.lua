@@ -36,19 +36,20 @@ vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>gf', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>')
 vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>')
-vim.keymap.set('n', '<leader>cf', '<Cmd>lua vim.lsp.buf.format()<CR>')
-vim.keymap.set('n', '<leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>')
-vim.keymap.set('n', '<leader>k', ':bnext<CR>')
-vim.keymap.set('n', '<leader>j', ':bprevious<CR>')
-vim.keymap.set('n', '<leader>d', ':bdelete<CR>')
-vim.keymap.set('n', '<leader>e', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<leader>fm', ':Ex<CR>')
+vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>1', ':bnext<CR>')
+vim.keymap.set('n', '<leader>2', ':bprevious<CR>')
+vim.keymap.set('n', '<leader>3', ':bdelete<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>h', ':wincmd h<CR>') -- nav
 vim.keymap.set('n', '<leader>j', ':wincmd j<CR>') -- nav
 vim.keymap.set('n', '<leader>k', ':wincmd k<CR>') -- nav
 vim.keymap.set('n', '<leader>l', ':wincmd l<CR>') -- nav
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>a", '<Cmd>AerialToggle<CR>')
 
 -- ins
 vim.keymap.set('i', '<C-f>', '<Cmd>Telescope find_files<CR>')
@@ -59,8 +60,7 @@ vim.keymap.set('n', '<leader>p', ':bprevious<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<CR>')
 
-
--- perserve cursor position
+-- preserve cursor position
 vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = '*',
   callback = function()
