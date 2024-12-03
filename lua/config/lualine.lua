@@ -74,7 +74,7 @@ local config = {
       { 'filetype', icon_only = true },
     },
 
-    lualine_c = { { 'filename' }, { 'filesize', icon = '󰖡' } },
+    lualine_c = { { 'filename' }, { 'filesize', icon = '' } },
     lualine_x = {
       'encoding',
       {

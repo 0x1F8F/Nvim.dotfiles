@@ -1,4 +1,5 @@
 return {
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	'NvChad/nvim-colorizer.lua',
   'stevearc/dressing.nvim',
   'lewis6991/gitsigns.nvim',
